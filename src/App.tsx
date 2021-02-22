@@ -1,5 +1,16 @@
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from './styles/global';
+
+import { useTheme } from './hooks/theme';
+
 function App() {
-  return <h1>Hello World</h1>;
+  const { theme } = useTheme();
+
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+    </ThemeProvider>
+  );
 }
 
 export default App;
