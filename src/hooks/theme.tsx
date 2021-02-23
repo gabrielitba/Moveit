@@ -33,21 +33,25 @@ const ThemeContext = createContext<ThemeContextProps>({} as ThemeContextProps);
 
 const ThemeProvider = ({ children }: ChildrenTheme) => {
   const [theme, setTheme] = useState<Theme>(() => {
-    const themeSaved = localStorage.getItem('@moveit:theme');
-    if (themeSaved) {
-      return JSON.parse(themeSaved);
-    } else {
-      return light;
+    if (process.browser) {
+      const themeSaved = localStorage.getItem('@moveit:theme');
+      if (themeSaved) {
+        return JSON.parse(themeSaved);
+      } else {
+        return light;
+      }
     }
   });
 
   const toggleTheme = () => {
-    if (theme.title === 'dark') {
-      setTheme(light);
-      localStorage.setItem('@moveit:theme', JSON.stringify(light));
-    } else {
-      setTheme(dark);
-      localStorage.setItem('@moveit:theme', JSON.stringify(dark));
+    if (process.browser) {
+      if (theme.title === 'dark') {
+        setTheme(light);
+        localStorage.setItem('@moveit:theme', JSON.stringify(light));
+      } else {
+        setTheme(dark);
+        localStorage.setItem('@moveit:theme', JSON.stringify(dark));
+      }
     }
   };
   return (

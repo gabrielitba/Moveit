@@ -11,14 +11,14 @@ export const Container = styled.header`
     flex: 1;
     height: 4px;
     border-radius: 4px;
-    background: ${(props) => props.theme.colors.grayLine};
+    background: var(--gray-line);
     margin: 0 1.5rem;
     position: relative;
 
     > div {
       height: 4px;
       border-radius: 4px;
-      background: ${(props) => props.theme.colors.green};
+      background: var(--green);
     }
 
     > span {

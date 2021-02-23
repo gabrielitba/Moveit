@@ -1,9 +1,7 @@
 import ExperienceBar from '../components/ExperienceBar';
 
-export default function Home() {
-  return (
-    <div>
-      <ExperienceBar />
-    </div>
-  );
-}
+const Home = () => {
+  return <ExperienceBar />;
+};
+
+export default Home;
