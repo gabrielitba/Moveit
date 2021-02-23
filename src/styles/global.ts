@@ -8,8 +8,8 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 body {
-  background: #f2f3f5;
-  color: #666;
+  background: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.text};
 }
 
 body,

@@ -20,7 +20,7 @@ export default {
 
   colors: {
     white: '#fff',
-    background: '#f2f3f5',
+    background: '#202020',
     grayLine: '#dcdde0',
     text: '#666666',
     textHighlight: '#b3b9ff',
