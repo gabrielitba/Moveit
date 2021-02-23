@@ -7,6 +7,16 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
+div#root{
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   background: ${(props) => props.theme.colors.background};
   color: ${(props) => props.theme.colors.text};
@@ -26,5 +36,17 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
 }
 `;
