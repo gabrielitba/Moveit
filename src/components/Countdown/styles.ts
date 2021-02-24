@@ -56,4 +56,14 @@ export const Container = styled.div`
       background: var(--blue-dark);
     }
   }
+
+  > button.activeButton {
+    background: var(--red);
+    color: var(--white);
+    opacity: 1;
+    &:hover {
+      background: var(--red-dark);
+      color: var(--white);
+    }
+  }
 `;
