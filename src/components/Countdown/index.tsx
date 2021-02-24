@@ -51,7 +51,11 @@ const Countdown = () => {
       </div>
 
       {hasFinished ? (
-        <button disabled>Ciclo encerrado</button>
+        <div>
+          <button disabled>
+            Ciclo encerrado <img src="icons/check-button.svg" alt="" />
+          </button>
+        </div>
       ) : isActive ? (
         <button className="activeButton" type="button" onClick={resetCountdown}>
           Abandonar o ciclo

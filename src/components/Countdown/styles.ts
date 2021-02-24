@@ -67,9 +67,31 @@ export const Container = styled.div`
     }
   }
 
-  > button:disabled {
-    background: var(--white);
-    color: var(--text);
-    cursor: not-allowed;
+  div {
+    align-items: center;
+
+    > button:disabled {
+      width: 100%;
+      height: 5rem;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-bottom: 5px solid var(--green);
+      border-radius: 5px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      background: var(--white);
+      color: var(--text);
+      transition: background-color 0.2s;
+
+      cursor: not-allowed;
+      > img {
+        margin-left: 1.2rem;
+        height: 18px;
+        width: 18px;
+      }
+    }
   }
 `;
