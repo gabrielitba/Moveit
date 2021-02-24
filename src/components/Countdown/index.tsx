@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import * as S from './styles';
 
 const Countdown = () => {
@@ -11,9 +11,9 @@ const Countdown = () => {
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
 
-  function startCountdown() {
+  const startCountdown = useCallback(() => {
     setActive(true);
-  }
+  }, []);
 
   useEffect(() => {
     if (active && time > 0) {
