@@ -22,6 +22,7 @@ interface Theme {
     textHighlight: string;
     title: string;
     red: string;
+    redDark: string;
     green: string;
     blue: string;
     blueDark: string;
@@ -32,16 +33,7 @@ interface Theme {
 const ThemeContext = createContext<ThemeContextProps>({} as ThemeContextProps);
 
 const ThemeProvider = ({ children }: ChildrenTheme) => {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (process.browser) {
-      const themeSaved = localStorage.getItem('@moveit:theme');
-      if (themeSaved) {
-        return JSON.parse(themeSaved);
-      } else {
-        return light;
-      }
-    }
-  });
+  const [theme, setTheme] = useState<Theme>(light);
 
   const toggleTheme = () => {
     if (process.browser) {

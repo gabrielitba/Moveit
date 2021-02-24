@@ -1,11 +1,10 @@
-import { GlobalStyles } from '../styles/global';
+import { ThemeProvider } from '../hooks/theme';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <GlobalStyles />
+    <ThemeProvider>
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 }
 

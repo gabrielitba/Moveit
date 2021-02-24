@@ -8,6 +8,7 @@ interface DarkTheme {
     textHighlight: string;
     title: string;
     red: string;
+    redDark: string;
     green: string;
     blue: string;
     blueDark: string;
@@ -26,6 +27,7 @@ export default {
     textHighlight: '#b3b9ff',
     title: '#2e384d',
     red: '#e83f5b',
+    redDark: '#e52948',
     green: '#4cd62b',
     blue: '#5965e0',
     blueDark: '#4953b8',

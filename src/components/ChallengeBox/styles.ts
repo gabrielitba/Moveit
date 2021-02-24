@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   height: 100%;
 
-  background: var(--white);
+  background: ${(props) => props.theme.colors.white};
   border-radius: 5px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
   padding: 1.5rem 2rem;
@@ -50,11 +50,11 @@ export const challengeActive = styled.div`
   flex-direction: column;
 
   > header {
-    color: var(--blue);
+    color: ${(props) => props.theme.colors.blue};
     font-weight: 600;
     font-size: 1.25rem;
     padding-bottom: 1.5rem;
-    border-bottom: 3.5px solid var(--blue-twitter);
+    border-bottom: 3.5px solid ${(props) => props.theme.colors.blueTwitter};
     align-self: center;
     width: 150%;
   }
@@ -94,7 +94,7 @@ export const challengeActive = styled.div`
       border: 0;
       border-radius: 5px;
 
-      color: var(--white);
+      color: ${(props) => props.theme.colors.white};
 
       font-size: 1rem;
       font-weight: 600;
@@ -107,11 +107,11 @@ export const challengeActive = styled.div`
     }
 
     > button:first-child {
-      background: var(--red);
+      background: ${(props) => props.theme.colors.red};
     }
 
     > button:last-child {
-      background: var(--green);
+      background: ${(props) => props.theme.colors.green};
     }
   }
 `;

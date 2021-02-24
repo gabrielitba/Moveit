@@ -2,21 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
 
-:root {
-  --white: #fff;
-  --background: #f2f3f5;
-  --gray-line: #dcdde0;
-  --text: #666666;
-  --text-highlight: #b3b9ff;
-  --title: #2e384d;
-  --red: #e83f5b;
-  --red-dark: #e52948;
-  --green: #4cd62b;
-  --blue: #5965e0;
-  --blue-dark: #4953b8;
-  --blue-twitter: #2aa9e0;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -24,8 +9,8 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 body {
-  background: var(--background);
-  color: var(--text);
+  background: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.text};
 }
 
 body,
