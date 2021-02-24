@@ -50,9 +50,9 @@ const Countdown = () => {
         </div>
       </div>
 
-      {hasFinished}
-
-      {isActive ? (
+      {hasFinished ? (
+        <button disabled>Ciclo encerrado</button>
+      ) : isActive ? (
         <button className="activeButton" type="button" onClick={resetCountdown}>
           Abandonar o ciclo
         </button>

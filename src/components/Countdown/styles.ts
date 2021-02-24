@@ -52,7 +52,7 @@ export const Container = styled.div`
     font-weight: 600;
     transition: background-color 0.2s;
 
-    &:hover {
+    &:not(:disabled):hover {
       background: var(--blue-dark);
     }
   }
@@ -61,9 +61,15 @@ export const Container = styled.div`
     background: var(--red);
     color: var(--white);
     opacity: 1;
-    &:hover {
+    &:not(:disabled):hover {
       background: var(--red-dark);
       color: var(--white);
     }
+  }
+
+  > button:disabled {
+    background: var(--white);
+    color: var(--text);
+    cursor: not-allowed;
   }
 `;
