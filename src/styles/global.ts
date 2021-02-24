@@ -35,6 +35,7 @@ button {
 }
 
 button {
+  outline: none;
   cursor: pointer;
 }
 
