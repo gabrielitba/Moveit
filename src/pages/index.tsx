@@ -23,6 +23,7 @@ const Home = () => {
         <Head>
           <title>Início | move.it</title>
         </Head>
+
         <ExperienceBar />
         <section>
           <div>

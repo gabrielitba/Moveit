@@ -1,3 +1,4 @@
+import ToggleTheme from '../ToggleTheme';
 import * as S from './styles';
 
 const Profile = () => {
@@ -11,6 +12,7 @@ const Profile = () => {
           Level 1
         </p>
       </div>
+      <ToggleTheme />
     </S.Container>
   );
 };

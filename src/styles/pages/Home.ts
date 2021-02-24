@@ -15,5 +15,12 @@ export const Container = styled.section`
     grid-template-columns: 1fr 1fr;
     gap: 6.25rem;
     align-content: center;
+
+    > div:first-child {
+      background: ${(props) => props.theme.colors.backBox};
+      padding: 5px;
+
+      border-radius: 5px;
+    }
   }
 `;

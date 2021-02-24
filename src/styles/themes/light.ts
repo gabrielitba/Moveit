@@ -13,6 +13,9 @@ interface LightTheme {
     blue: string;
     blueDark: string;
     blueTwitter: string;
+    after: string;
+    before: string;
+    backBox: string;
   };
 }
 
@@ -32,5 +35,8 @@ export default {
     blue: '#5965e0',
     blueDark: '#4953b8',
     blueTwitter: '#2aa9e0',
+    after: '#01b163',
+    before: '#ff3a19',
+    backBox: '#f1f1f1',
   },
 } as LightTheme;

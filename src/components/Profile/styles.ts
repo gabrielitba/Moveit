@@ -11,7 +11,7 @@ export const Container = styled.div`
   }
 
   div {
-    margin-left: 1.5rem;
+    margin-left: 1.1rem;
 
     strong {
       font-size: 1.5rem;

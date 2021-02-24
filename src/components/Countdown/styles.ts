@@ -7,6 +7,10 @@ export const Container = styled.div`
     font-family: Rajdhani;
     font-weight: 600;
     color: ${(props) => props.theme.colors.title};
+
+    > span {
+      color: ${(props) => props.theme.colors.title};
+    }
     > div {
       flex: 1;
       display: flex;
@@ -23,11 +27,13 @@ export const Container = styled.div`
       }
 
       span:first-child {
-        border-right: 1px solid #f0f1f3;
+        border-right: 1px solid ${(props) => props.theme.colors.backBox};
+        background: ${(props) => props.theme.colors.background};
       }
 
       span:last-child {
-        border-left: 1px solid #f0f1f3;
+        border-left: 1px solid ${(props) => props.theme.colors.backBox};
+        background: ${(props) => props.theme.colors.background};
       }
     }
 
@@ -68,7 +74,7 @@ export const Container = styled.div`
   }
 
   > button:disabled {
-    background: ${(props) => props.theme.colors.white};
+    background: ${(props) => props.theme.colors.background};
     color: ${(props) => props.theme.colors.text};
     cursor: not-allowed;
     font-size: 140%;
