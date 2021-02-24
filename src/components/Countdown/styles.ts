@@ -78,7 +78,7 @@ export const Container = styled.div`
     align-items: center;
     border-bottom: 5px solid var(--green);
     > img {
-      align-self: auto;
+      align-self: center;
       margin-left: 1.1rem;
       height: 18px;
       width: 18px;
