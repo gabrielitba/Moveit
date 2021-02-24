@@ -2,8 +2,10 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import * as S from './styles';
 
 const Countdown = () => {
-  const [time, setTime] = useState(25 * 60);
+  const [time, setTime] = useState(3);
+
   const [isActive, setIsActive] = useState(false);
+  const [hasFinished, setHasFinished] = useState(false);
 
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
@@ -28,6 +30,9 @@ const Countdown = () => {
       countDownTimeout.current = setTimeout(() => {
         setTime(time - 1);
       }, 1000);
+    } else if (isActive && time === 0) {
+      setHasFinished(true);
+      setIsActive(false);
     }
   }, [isActive, time]);
 
@@ -44,6 +49,9 @@ const Countdown = () => {
           <span>{secondRight}</span>
         </div>
       </div>
+
+      {hasFinished}
+
       {isActive ? (
         <button className="activeButton" type="button" onClick={resetCountdown}>
           Abandonar o ciclo
