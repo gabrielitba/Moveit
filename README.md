@@ -2,7 +2,7 @@
 
 &nbsp;
 
-![alt text](https://i.imgur.com/yyEDyMf.png)
+![alt text](https://i.imgur.com/Apdl4B9.gif)
 
 ## 💻 Tecnologias utilizadas até o momento
 
