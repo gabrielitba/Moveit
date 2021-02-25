@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
 
-import { ThemeProvider } from './theme';
 import { ChallengesProvider } from './challenges';
+import { CountdownProvider } from './countdown';
+import { ThemeProvider } from './theme';
 
 interface AppProviderProps {
   children: ReactNode;
@@ -9,7 +10,9 @@ interface AppProviderProps {
 
 const AppProvider = ({ children }: AppProviderProps) => (
   <ChallengesProvider>
-    <ThemeProvider>{children}</ThemeProvider>
+    <CountdownProvider>
+      <ThemeProvider>{children}</ThemeProvider>
+    </CountdownProvider>
   </ChallengesProvider>
 );
 
