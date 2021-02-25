@@ -1,46 +1,19 @@
-import { useState, useEffect, useCallback, useRef, useContext } from 'react';
-
-import { ChallengesContext } from '../../hooks/challenges';
-
+import { useContext } from 'react';
+import { CountdownContext } from '../../hooks/countdown';
 import * as S from './styles';
 
 const Countdown = () => {
-  const { handleNewChallenge } = useContext(ChallengesContext);
-
-  const [time, setTime] = useState(3);
-
-  const [isActive, setIsActive] = useState(false);
-  const [hasFinished, setHasFinished] = useState(false);
-
-  const minutes = Math.floor(time / 60);
-  const seconds = time % 60;
+  const {
+    minutes,
+    seconds,
+    isActive,
+    hasFinished,
+    startCountdown,
+    resetCountdown,
+  } = useContext(CountdownContext);
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
-
-  const countDownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const startCountdown = useCallback(() => {
-    setIsActive(true);
-  }, []);
-
-  const resetCountdown = useCallback(() => {
-    clearTimeout(countDownTimeout.current);
-    setIsActive(false);
-    setTime(25 * 60);
-  }, []);
-
-  useEffect(() => {
-    if (isActive && time > 0) {
-      countDownTimeout.current = setTimeout(() => {
-        setTime(time - 1);
-      }, 1000);
-    } else if (isActive && time === 0) {
-      setHasFinished(true);
-      setIsActive(false);
-      handleNewChallenge();
-    }
-  }, [isActive, time, handleNewChallenge]);
 
   return (
     <S.Container>
