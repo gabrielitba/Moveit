@@ -1,8 +1,9 @@
 import {
-  createContext,
-  useCallback,
   useState,
+  useEffect,
+  useCallback,
   useMemo,
+  createContext,
   ReactNode,
 } from 'react';
 
@@ -57,6 +58,12 @@ export const ChallengesProvider = ({ children }: ChallengesProviderProps) => {
     const challenge = challenges[randomChallengerIndex];
 
     setActiveChallenge(challenge);
+
+    if (Notification.permission === 'granted') {
+      new Notification('Novo desafio 🎉', {
+        body: `Valendo ${challenge.amount}xp`,
+      });
+    }
   }, []);
 
   const handleResetChallenge = useCallback(() => {
@@ -89,6 +96,10 @@ export const ChallengesProvider = ({ children }: ChallengesProviderProps) => {
     experienceToNextLevel,
     handleLevelUp,
   ]);
+
+  useEffect(() => {
+    Notification.requestPermission();
+  }, []);
 
   return (
     <ChallengesContext.Provider
