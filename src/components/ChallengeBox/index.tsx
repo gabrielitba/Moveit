@@ -5,9 +5,11 @@ import { ChallengesContext } from '../../hooks/challenges';
 import * as S from './styles';
 
 const ChallengeBox = () => {
-  const { activeChallenge, handleResetChallenge } = useContext(
-    ChallengesContext,
-  );
+  const {
+    activeChallenge,
+    handleResetChallenge,
+    handleCompletedChallenge,
+  } = useContext(ChallengesContext);
 
   return (
     <S.Container>
@@ -28,7 +30,9 @@ const ChallengeBox = () => {
             <button onClick={handleResetChallenge} type="button">
               Falhei
             </button>
-            <button type="button">Completei</button>
+            <button onClick={handleCompletedChallenge} type="button">
+              Completei
+            </button>
           </footer>
         </S.challengeActive>
       ) : (
