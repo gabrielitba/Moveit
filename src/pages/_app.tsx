@@ -1,13 +1,10 @@
-import { ThemeProvider } from '../hooks/theme';
-import { ChallengesProvider } from '../hooks/challenges';
+import AppProvider from '../hooks';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChallengesProvider>
-      <ThemeProvider>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </ChallengesProvider>
+    <AppProvider>
+      <Component {...pageProps} />
+    </AppProvider>
   );
 }
 
