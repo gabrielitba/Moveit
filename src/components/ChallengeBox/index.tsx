@@ -5,26 +5,29 @@ import { ChallengesContext } from '../../hooks/challenges';
 import * as S from './styles';
 
 const ChallengeBox = () => {
-  const contextData = useContext(ChallengesContext);
-
-  console.log(contextData);
-
-  const isActive = true;
+  const { activeChallenge, handleResetChallenge } = useContext(
+    ChallengesContext,
+  );
 
   return (
     <S.Container>
-      {isActive ? (
+      {activeChallenge ? (
         <S.challengeActive>
-          <header>Ganhe 400 xp</header>
+          <header>Ganhe {activeChallenge.amount} xp</header>
 
           <main>
-            <img src="icons/body.svg" alt="Uma mão com halter" />
+            <img
+              src={`icons/${activeChallenge.type}.svg`}
+              alt="Uma mão com halter"
+            />
             <strong>Novo Desafio</strong>
-            <p>Faça uma caminhada</p>
+            <p>{activeChallenge.description}</p>
           </main>
 
           <footer>
-            <button type="button">Falhei</button>
+            <button onClick={handleResetChallenge} type="button">
+              Falhei
+            </button>
             <button type="button">Completei</button>
           </footer>
         </S.challengeActive>

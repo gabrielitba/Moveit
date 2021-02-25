@@ -56,7 +56,7 @@ export const challengeActive = styled.div`
     padding-bottom: 1.5rem;
     border-bottom: 3.5px solid ${(props) => props.theme.colors.blueTwitter};
     align-self: center;
-    width: 150%;
+    width: 100%;
   }
 
   > main {
