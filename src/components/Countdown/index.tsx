@@ -1,7 +1,12 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, useContext } from 'react';
+
+import { ChallengesContext } from '../../hooks/challenges';
+
 import * as S from './styles';
 
 const Countdown = () => {
+  const { handleNewChallenge } = useContext(ChallengesContext);
+
   const [time, setTime] = useState(3);
 
   const [isActive, setIsActive] = useState(false);
@@ -33,8 +38,9 @@ const Countdown = () => {
     } else if (isActive && time === 0) {
       setHasFinished(true);
       setIsActive(false);
+      handleNewChallenge();
     }
-  }, [isActive, time]);
+  }, [isActive, time, handleNewChallenge]);
 
   return (
     <S.Container>
