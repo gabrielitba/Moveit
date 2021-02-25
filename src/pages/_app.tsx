@@ -1,5 +1,4 @@
 import { ThemeProvider } from '../hooks/theme';
-
 import { ChallengesProvider } from '../hooks/challenges';
 
 function MyApp({ Component, pageProps }) {
