@@ -10,7 +10,7 @@ export const Container = styled.div`
     border-radius: 50%;
   }
 
-  div {
+  > div {
     margin-left: 1.1rem;
 
     strong {
