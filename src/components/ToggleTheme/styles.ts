@@ -105,7 +105,7 @@ export const Container = styled.div`
         &:after {
           transform: rotateY(0);
           left: 0;
-          background: #01b163;
+          background: ${(props) => props.theme.colors.before};
         }
 
         &:active:after {
