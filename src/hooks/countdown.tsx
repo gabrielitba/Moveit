@@ -25,7 +25,7 @@ interface CountdownProviderProps {
   children: ReactNode;
 }
 
-const INITIAL_TIMER = 2; // 25 * 60
+const INITIAL_TIMER = 25 * 60; // 3
 
 export const CountdownContext = createContext({} as CountdownContextData);
 
