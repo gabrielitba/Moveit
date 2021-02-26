@@ -1,10 +1,10 @@
+# Move.it
+
 &nbsp;
 
 ## 🙋‍♂ Apresentação:
 
-Uma single-page application para pesquisa de filmes. Ela consome dados da API da The Movie Database, e exibe os resultado pesquisado, dando a opção de exibir detalhes e favoritar seus filmes.
-
-API Reference: https://developers.themoviedb.org/3/getting-started/introduction
+O Move.it é um uma aplicação feita em Next.JS, que utiliza como base a técnica de pomodoro, e ao final de cada cíclo, sugere um exercicio físico. A aplicação foi desenvolvido durante a Next Level Week #4 da Rocketseat, porém, adicionei algumas configurações e funcionalidades.
 
 &nbsp;
 
@@ -12,7 +12,7 @@ API Reference: https://developers.themoviedb.org/3/getting-started/introduction
 
 ![alt text](https://i.imgur.com/la6t8s0.gif)
 
-[Ou acesse agora](https://cinfilositba.netlify.app/)
+[Ou acesse agora](https://moveititba.netlify.app/)
 
 &nbsp;
 
@@ -32,15 +32,15 @@ API Reference: https://developers.themoviedb.org/3/getting-started/introduction
 
 ## ⚙️ Funcionalidades
 
-Exibe os ultimos lançamentos na pagina principal;
+Temporizador para os cíclos;
 
-Pesquisar filmes por titulo;
+Barra de experiência, e indicador de level;
 
-Exibir detalhes do filme clicado;
+Card com desafios aleatórios;
 
-Favoritar/Desfavoritar filme (os dados são armazenados no localstorage);
+Notificação e sinalização sonora ao fim de cada cíclo;
 
-Checagem para verificar se o filme pesquisado existe.
+Dark Mode.
 
 &nbsp;
 
@@ -49,7 +49,7 @@ Checagem para verificar se o filme pesquisado existe.
 Para iniciar, usando o terminal, clone esse repositório em uma pasta com o comando:
 
 ```bash
-git clone https://github.com/gabrielitba/Film-Search.git
+git clone https://github.com/gabrielitba/Moveit.git
 ```
 
 Instalando as dependências:
@@ -61,5 +61,5 @@ yarn ou yarn install
 Para iniciar digite no terminal:
 
 ```bash
-yarn start
+yarn dev
 ```
