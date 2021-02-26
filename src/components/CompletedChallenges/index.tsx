@@ -1,6 +1,6 @@
-import { useContext, useMemo } from 'react';
+import { useContext } from 'react';
 
-import { ChallengesContext } from '../../hooks/challenges';
+import { ChallengesContext } from '../../context/challenges';
 
 import * as S from './styles';
 

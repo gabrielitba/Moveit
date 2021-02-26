@@ -1,4 +1,4 @@
-import AppProvider from '../hooks';
+import AppProvider from '../context';
 
 function MyApp({ Component, pageProps }) {
   return (

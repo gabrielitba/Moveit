@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Container } from './styles';
 
-import { useTheme } from '../../hooks/theme';
+import { useTheme } from '../../context/theme';
 
 const ToggleTheme = () => {
   const { theme, toggleTheme } = useTheme();

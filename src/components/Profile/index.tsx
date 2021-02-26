@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 
 import ToggleTheme from '../ToggleTheme';
-import { ChallengesContext } from '../../hooks/challenges';
+import { ChallengesContext } from '../../context/challenges';
 
 import * as S from './styles';
 

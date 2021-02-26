@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { GlobalStyles } from '../styles/global';
 
 import { ThemeProvider } from 'styled-components';
-import { useTheme } from '../hooks/theme';
+import { useTheme } from '../context/theme';
 
 import CompletedChallenges from '../components/CompletedChallenges';
 import Countdown from '../components/Countdown';

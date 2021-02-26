@@ -1,7 +1,7 @@
 import { useContext, useCallback } from 'react';
 
-import { ChallengesContext } from '../../hooks/challenges';
-import { CountdownContext } from '../../hooks/countdown';
+import { ChallengesContext } from '../../context/challenges';
+import { CountdownContext } from '../../context/countdown';
 
 import * as S from './styles';
 
