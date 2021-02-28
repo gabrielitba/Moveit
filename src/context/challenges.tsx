@@ -37,12 +37,22 @@ export const ChallengesContext = createContext({} as ChallengesContextProps);
 
 interface ChallengesProviderProps {
   children: ReactNode;
+  level: number;
+  currentExperience: number;
+  challengesCompleted: number;
 }
 
-export const ChallengesProvider = ({ children }: ChallengesProviderProps) => {
-  const [level, setLevel] = useState(1);
-  const [challengesCompleted, setChanllengesCompleted] = useState(0);
-  const [currentExperience, setCurrentExperience] = useState(0);
+export const ChallengesProvider = ({
+  children,
+  ...rest
+}: ChallengesProviderProps) => {
+  const [level, setLevel] = useState(rest.level ?? 1);
+  const [challengesCompleted, setChanllengesCompleted] = useState(
+    rest.challengesCompleted ?? 0,
+  );
+  const [currentExperience, setCurrentExperience] = useState(
+    rest.currentExperience ?? 0,
+  );
 
   const [activeChallenge, setActiveChallenge] = useState(null);
 
