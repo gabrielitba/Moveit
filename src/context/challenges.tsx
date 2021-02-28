@@ -7,6 +7,8 @@ import {
   ReactNode,
 } from 'react';
 
+import Cookies from 'js-cookie';
+
 import challenges from '../../challenges.json';
 
 type ChallengeType = {
@@ -102,6 +104,12 @@ export const ChallengesProvider = ({ children }: ChallengesProviderProps) => {
   useEffect(() => {
     Notification.requestPermission();
   }, []);
+
+  useEffect(() => {
+    Cookies.set('level', String(level));
+    Cookies.set('currentExperience', String(currentExperience));
+    Cookies.set('challengesCompleted', String(challengesCompleted));
+  }, [challengesCompleted, currentExperience, level]);
 
   return (
     <ChallengesContext.Provider

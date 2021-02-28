@@ -1,3 +1,4 @@
+import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
 import { GlobalStyles } from '../styles/global';
@@ -13,7 +14,7 @@ import ChallengeBox from '../components/ChallengeBox';
 
 import * as S from '../styles/pages/Home';
 
-const Home = () => {
+const Home = (props) => {
   const { theme } = useTheme();
 
   return (
@@ -41,3 +42,11 @@ const Home = () => {
 };
 
 export default Home;
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
+
+  return {
+    props: { level, currentExperience, challengesCompleted },
+  };
+};
