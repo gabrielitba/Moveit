@@ -9,6 +9,8 @@ import {
 
 import Cookies from 'js-cookie';
 
+import Modal from '../components/Modal';
+
 import challenges from '../../challenges.json';
 
 type ChallengeType = {
@@ -31,6 +33,7 @@ interface ChallengesContextProps {
   handleResetChallenge: () => void;
   handleCompletedChallenge: () => void;
   experienceToNextLevel: number;
+  handleCloseModal: () => void;
 }
 
 export const ChallengesContext = createContext({} as ChallengesContextProps);
@@ -60,8 +63,15 @@ export const ChallengesProvider = ({
     level,
   ]);
 
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleCloseModal = useCallback(() => {
+    setOpenModal(false);
+  }, []);
+
   const handleLevelUp = useCallback(() => {
     setLevel(level + 1);
+    setOpenModal(true);
   }, [level, setLevel]);
 
   const handleNewChallenge = useCallback(() => {
@@ -88,10 +98,6 @@ export const ChallengesProvider = ({
     if (!activeChallenge) return;
 
     const { amount } = activeChallenge;
-
-    // let tempLevel = level;
-    // let tempCurrentExperience = currentExperience;
-    // let tempExperienceToNextLevel = experienceToNextLevel;
 
     let finalExperience = currentExperience + amount;
 
@@ -133,9 +139,11 @@ export const ChallengesProvider = ({
         handleResetChallenge,
         handleCompletedChallenge,
         experienceToNextLevel,
+        handleCloseModal,
       }}
     >
       {children}
+      {openModal && <Modal />}
     </ChallengesContext.Provider>
   );
 };
