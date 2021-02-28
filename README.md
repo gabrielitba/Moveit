@@ -26,6 +26,8 @@ O Move.it é um uma aplicação feita em Next.JS, que utiliza como base a técni
 - **lint-staged**
 - **styled-components**
 - **Context API**
+- **Local Storage**
+- **Cookies**
 
 &nbsp;
 
