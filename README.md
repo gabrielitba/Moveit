@@ -10,7 +10,7 @@ O Move.it é um uma aplicação feita em Next.JS, que utiliza como base a técni
 
 ## 🎥 Prévia do Projeto
 
-![alt text](https://i.imgur.com/la6t8s0.gif)
+![alt text](https://i.imgur.com/TzutAXY.gif)
 
 [Ou acesse agora](https://moveititba.netlify.app/)
 
