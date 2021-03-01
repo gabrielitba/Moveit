@@ -12,7 +12,7 @@ O Move.it é um uma aplicação feita em Next.JS, que utiliza como base a técni
 
 ![alt text](https://i.imgur.com/TzutAXY.gif)
 
-[Ou acesse agora](https://moveititba.netlify.app/)
+[Ou acesse agora]()
 
 &nbsp;
 
