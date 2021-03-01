@@ -7,7 +7,7 @@ import { useTheme } from '../context/theme';
 
 import { ChallengesProvider } from '../context/challenges';
 
-import HomePage from '../styles/templates/HomePage';
+import HomePage from '../templates/HomePage';
 
 interface HomeProps {
   level: number;
