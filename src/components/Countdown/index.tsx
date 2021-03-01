@@ -35,11 +35,11 @@ const Countdown = () => {
         </button>
       ) : isActive ? (
         <button className="activeButton" type="button" onClick={resetCountdown}>
-          Abandonar o ciclo
+          Abandonar o ciclo <img src="icons/stop-button.svg" alt="" />
         </button>
       ) : (
         <button type="button" onClick={startCountdown}>
-          Iniciar um ciclo
+          Iniciar um ciclo <img src="icons/start-button.svg" alt="" />
         </button>
       )}
     </S.Container>

@@ -54,9 +54,16 @@ export const Container = styled.div`
     border-radius: 5px;
     background: ${(props) => props.theme.colors.blue};
     color: ${(props) => props.theme.colors.white};
-    font-size: 1.25rem;
+    font-size: 140%;
     font-weight: 600;
     transition: background-color 0.2s;
+
+    > img {
+      align-self: center;
+      margin-left: 1.1rem;
+      height: 18px;
+      width: 18px;
+    }
 
     &:not(:disabled):hover {
       background: ${(props) => props.theme.colors.blueDark};
@@ -77,17 +84,10 @@ export const Container = styled.div`
     background: ${(props) => props.theme.colors.background};
     color: ${(props) => props.theme.colors.text};
     cursor: not-allowed;
-    font-size: 140%;
 
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 5px solid ${(props) => props.theme.colors.green};
-    > img {
-      align-self: center;
-      margin-left: 1.1rem;
-      height: 18px;
-      width: 18px;
-    }
   }
 `;
